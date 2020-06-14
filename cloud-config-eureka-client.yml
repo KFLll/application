@@ -49,4 +49,4 @@ spring:
       name: admin
       password: 123
   application: 
-    name: eureka1
+    name: eureka2
