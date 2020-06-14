@@ -24,6 +24,8 @@ spring:
     user:
       name: admin
       password: 123
+  application: 
+    name: eureka1
 ---
 server:
   port: 7002
@@ -46,3 +48,5 @@ spring:
     user:
       name: admin
       password: 123
+  application: 
+    name: eureka1
