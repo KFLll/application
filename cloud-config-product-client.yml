@@ -1,0 +1,146 @@
+server:
+  port: 8080
+mybatis:
+  mapper-locations: classpath:mapper/*.xml # 所有的mapper映射文件
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource # 配置当前要使用的数据源的操作类型
+#    driver-class-name: com.mysql.cj.jdbc.Driver # 配置MySQL的驱动程序类
+    driver-class-name: com.mysql.jdbc.Driver # 配置MySQL的驱动程序类
+    url: jdbc:mysql://localhost:3306/springcloud?serverTimezone=GMT%2B8 # 数据库连接地址
+    username: root # 数据库用户名
+    password: 123 # 数据库连接密码
+  application:
+    name: cloud-product-provider
+
+#  security:
+#    user:
+#      name: admin  # 认证用户名
+#      password: 123  # 认证密码
+#      roles:
+#        - USER # 授权角色
+logging:
+  level:
+    com.lukf.mapper: debug
+eureka:
+  client: # 客户端进行Eureka注册的配置
+    service-url:
+      defaultZone: http://admin:123@eureka1:7001/eureka,http://admin:123@eureka2:7002/eureka
+  instance:
+    instance-id: cloud-product-provider
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 2 # 设置心跳的时间间隔（默认是30秒）
+    lease-expiration-duration-in-seconds: 5  # 如果现在超过了5秒的间隔（默认是90秒）
+
+
+info:
+  app.name: cloud-product-provider
+  company.name: com.com.lukf
+  build.artifactId: $project.artifactId$
+  build.modelVersion: $project.modelVersion$
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+---
+server:
+  port: 8081
+mybatis:
+  mapper-locations: classpath:mapper/*.xml # 所有的mapper映射文件
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource # 配置当前要使用的数据源的操作类型
+#    driver-class-name: com.mysql.cj.jdbc.Driver # 配置MySQL的驱动程序类
+    driver-class-name: com.mysql.jdbc.Driver # 配置MySQL的驱动程序类
+    url: jdbc:mysql://localhost:3306/springcloud2?serverTimezone=GMT%2B8 # 数据库连接地址
+    username: root # 数据库用户名
+    password: 123 # 数据库连接密码
+  application:
+    name: cloud-product-provider
+
+#  security:
+#    user:
+#      name: admin  # 认证用户名
+#      password: 123  # 认证密码
+#      roles:
+#        - USER # 授权角色
+logging:
+  level:
+    com.lukf.mapper: debug
+eureka:
+  client: # 客户端进行Eureka注册的配置
+    service-url:
+      defaultZone: http://admin:123@eureka1:7001/eureka,http://admin:123@eureka2:7002/eureka
+  instance:
+    instance-id: cloud-product-provider2
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 2 # 设置心跳的时间间隔（默认是30秒）
+    lease-expiration-duration-in-seconds: 5  # 如果现在超过了5秒的间隔（默认是90秒）
+
+
+info:
+  app.name: cloud-product-provider2
+  company.name: com.com.lukf
+  build.artifactId: $project.artifactId$
+  build.modelVersion: $project.modelVersion$
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+---
+server:
+  port: 8082
+mybatis:
+  mapper-locations: classpath:mapper/*.xml # 所有的mapper映射文件
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource # 配置当前要使用的数据源的操作类型
+#    driver-class-name: com.mysql.cj.jdbc.Driver # 配置MySQL的驱动程序类
+    driver-class-name: com.mysql.jdbc.Driver # 配置MySQL的驱动程序类
+    url: jdbc:mysql://localhost:3306/springcloud3?serverTimezone=GMT%2B8 # 数据库连接地址
+    username: root # 数据库用户名
+    password: 123 # 数据库连接密码
+  application:
+    name: cloud-product-provider
+
+#  security:
+#    user:
+#      name: admin  # 认证用户名
+#      password: 123  # 认证密码
+#      roles:
+#        - USER # 授权角色
+logging:
+  level:
+    com.lukf.mapper: debug
+eureka:
+  client: # 客户端进行Eureka注册的配置
+    service-url:
+      defaultZone: http://admin:123@eureka1:7001/eureka,http://admin:123@eureka2:7002/eureka
+  instance:
+    instance-id: cloud-product-provider3
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 2 # 设置心跳的时间间隔（默认是30秒）
+    lease-expiration-duration-in-seconds: 5  # 如果现在超过了5秒的间隔（默认是90秒）
+
+
+info:
+  app.name: cloud-product-provider3
+  company.name: com.com.lukf
+  build.artifactId: $project.artifactId$
+  build.modelVersion: $project.modelVersion$
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
