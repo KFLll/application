@@ -1,3 +1,8 @@
+spring:
+  profiles:
+    active:
+      - dev
+---
 server:
   port: 8080
 mybatis:
@@ -13,7 +18,7 @@ spring:
     password: 123 # 数据库连接密码
   application:
     name: cloud-product-provider
-
+  profiles: dev
 #  security:
 #    user:
 #      name: admin  # 认证用户名
@@ -62,7 +67,7 @@ spring:
     password: 123 # 数据库连接密码
   application:
     name: cloud-product-provider
-
+  profiles: dev
 #  security:
 #    user:
 #      name: admin  # 认证用户名
@@ -111,7 +116,7 @@ spring:
     password: 123 # 数据库连接密码
   application:
     name: cloud-product-provider
-
+  profiles: dev
 #  security:
 #    user:
 #      name: admin  # 认证用户名
